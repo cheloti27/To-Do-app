@@ -7,4 +7,4 @@ Mark tasks complete
 Filter by ALL/Active/Completed
 Tasks saved with local storage.
 Live Demo
-https://cheloti.github.io/todo-app
+https://cheloti27.github.io/To-Do-app/
