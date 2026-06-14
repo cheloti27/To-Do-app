@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>To-Do List App</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title> To-Do App</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="app">
+
+<header class="app-header">
+<h1>My Tasks</h1>
+<span id="taskCount">0 Tasks</span>
+</header>
+
+<button id="darkModeBtn">Toggle Dark Mode</button>
+
+<form id="taskForm" class="add-form">
+
+<input
+type="text"
+id="taskInput"
+placeholder="Enter task"
+required>
+
+<input
+type="date"
+id="dueDate">
+
+<select id="priority">
+<option value="Low">Low</option>
+<option value="Medium">Medium</option>
+<option value="High">High</option>
+</select>
+
+<button type="submit">Add</button>
+
+</form>
+
+<input
+type="text"
+id="searchInput"
+class="search-box"
+placeholder="Search tasks...">
+
+<div class="filter-bar">
+
+<button class="filter-btn active" data-filter="all">
+All
+</button>
+
+<button class="filter-btn" data-filter="active">
+Active
+</button>
+
+<button class="filter-btn" data-filter="completed">
+Completed
+</button>
+
+</div>
+
+<ul id="taskList"></ul>
+
+<p id="emptyMsg" class="empty-msg">
+No tasks yet. Add one above!
+</p>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

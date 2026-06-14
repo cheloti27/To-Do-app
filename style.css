@@ -1,0 +1,305 @@
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Segoe UI', Arial, sans-serif;
+    background:#f0f2f5;
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    padding:40px 16px;
+    transition:0.3s;
+}
+
+.app{
+    background:rgb(251, 249, 249);
+    border-radius:12px;
+    box-shadow:0 4px 24px rgba(200, 27, 27, 0.1);
+    padding:32px;
+    width:100%;
+    max-width:650px;
+    height:fit-content;
+}
+
+.app-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:24px;
+}
+
+.app-header h1{
+    font-size:1.6rem;
+    color: #28a745;
+}
+
+#taskCount{
+    font-size:0.9rem;
+    color:#888;
+}
+
+/* FORM */
+
+.add-form{
+    display:grid;
+    grid-template-columns:2fr 1fr 1fr auto;
+    gap:10px;
+    margin-bottom:16px;
+}
+
+.add-form input,
+.add-form select{
+    padding:10px 14px;
+    border:1px solid #ddd;
+    border-radius:8px;
+    font-size:1rem;
+    outline:none;
+}
+
+.add-form input:focus,
+.add-form select:focus{
+    border-color:#111;
+}
+
+.add-form button{
+    padding:10px 20px;
+    background:#111;
+    color:white;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+    font-size:1rem;
+}
+
+.add-form button:hover{
+    background:#333;
+}
+
+/* SEARCH */
+
+.search-box{
+    width:100%;
+    padding:10px 14px;
+    border:1px solid #ddd;
+    border-radius:8px;
+    margin-bottom:16px;
+}
+
+/* FILTERS */
+
+.filter-bar{
+    display:flex;
+    gap:8px;
+    margin-bottom:20px;
+    flex-wrap:wrap;
+}
+
+.filter-btn{
+    padding:6px 14px;
+    border:1px solid #ddd;
+    border-radius:20px;
+    background:white;
+    cursor:pointer;
+    font-size:0.85rem;
+}
+
+.filter-btn.active{
+    background:#111;
+    color:white;
+    border-color:#111;
+}
+
+/* DARK MODE BUTTON */
+
+#darkModeBtn{
+    background:#111;
+    color:white;
+    border:none;
+    padding:10px 15px;
+    border-radius:8px;
+    cursor:pointer;
+    margin-bottom:16px;
+}
+
+#darkModeBtn:hover{
+    background:#333;
+}
+
+/* TASK LIST */
+
+#taskList{
+    list-style:none;
+}
+
+.task-item,
+li{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:10px;
+    padding:14px;
+    margin-bottom:10px;
+    border-radius:10px;
+    background:#fafafa;
+    border:1px solid #eee;
+    cursor:grab;
+}
+
+li.dragging{
+    opacity:0.5;
+}
+
+.task-content{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    flex-wrap:wrap;
+    flex:1;
+}
+
+.task-text{
+    flex:1;
+    font-size:1rem;
+    cursor:pointer;
+}
+
+.completed{
+    text-decoration:line-through;
+    color:#aaa;
+}
+
+/* PRIORITY BADGES */
+
+.priority{
+    padding:4px 8px;
+    border-radius:20px;
+    color:white;
+    font-size:12px;
+    font-weight:600;
+}
+
+.high{
+    background:#dc3545;
+}
+
+.medium{
+    background:#fd7e14;
+}
+
+.low{
+    background:#28a745;
+}
+
+/* DUE DATE */
+
+.due-date{
+    font-size:12px;
+    color:#666;
+}
+
+/* ACTION BUTTONS */
+
+.actions{
+    display:flex;
+    gap:6px;
+}
+
+.edit-btn{
+    background:#ffc107;
+    border:none;
+    color:white;
+    padding:6px 10px;
+    border-radius:6px;
+    cursor:pointer;
+}
+
+.edit-btn:hover{
+    background:#e0a800;
+}
+
+.delete-btn{
+    background:#dc3545;
+    border:none;
+    color:white;
+    padding:6px 10px;
+    border-radius:6px;
+    cursor:pointer;
+}
+
+.delete-btn:hover{
+    background:#c82333;
+}
+
+/* EMPTY MESSAGE */
+
+.empty-msg{
+    text-align:center;
+    color:#aaa;
+    font-size:0.95rem;
+    margin-top:20px;
+}
+
+/* DARK MODE */
+
+.dark-mode{
+    background:#121212;
+    color:white;
+}
+
+.dark-mode .app{
+    background:#1e1e1e;
+}
+
+.dark-mode #taskCount{
+    color:#ccc;
+}
+
+.dark-mode li{
+    background:#2a2a2a;
+    border-color:#444;
+}
+
+.dark-mode input,
+.dark-mode select,
+.dark-mode .search-box{
+    background:#333;
+    color:white;
+    border:1px solid #555;
+}
+
+.dark-mode .filter-btn{
+    background:#333;
+    color:white;
+    border-color:#555;
+}
+
+.dark-mode .filter-btn.active{
+    background:white;
+    color:black;
+}
+
+.dark-mode .due-date{
+    color:#bbb;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+    .add-form{
+        grid-template-columns:1fr;
+    }
+
+    .app{
+        padding:20px;
+    }
+
+    .task-content{
+        flex-direction:column;
+        align-items:flex-start;
+    }
+}
